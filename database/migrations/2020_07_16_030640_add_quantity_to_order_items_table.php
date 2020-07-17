@@ -14,7 +14,7 @@ class AddQuantityToOrderItemsTable extends Migration
     public function up()
     {
         Schema::table('order_items', function (Blueprint $table) {
-            $table->integer('quantity')->unsigned();
+            $table->integer('quantity')->unsigned()->nullable()->default(1);
         });
     }
 

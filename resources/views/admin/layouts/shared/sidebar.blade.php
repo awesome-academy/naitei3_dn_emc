@@ -17,9 +17,9 @@
                     </a>
                     <ul class="sub">
                         <li><a href="{{ route('manage_users') }}">{{ trans('sidebar.mUser') }}</a></li>
-                        <li><a href="basic_table.html">{{ trans('sidebar.mCategory') }}</a></li>
+                        <li><a href="{{ route('manage_categories') }}">{{ trans('sidebar.mCategory') }}</a></li>
                         <li><a href="basic_table.html">{{ trans('sidebar.mProduct') }}</a></li>
-                        <li><a href="basic_table.html">{{ trans('sidebar.mListOrder') }}</a></li>
+                        <li><a href="{{ route('manage_orders') }}">{{ trans('sidebar.mListOrder') }}</a></li>
                         <li><a href="basic_table.html">{{ trans('sidebar.mListRequest') }}</a></li>
                     </ul>
                 </li>
