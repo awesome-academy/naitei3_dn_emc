@@ -30,6 +30,12 @@ Route::group(['prefix'=>'admin-page'],function(){
     Route::get('user/edit/{id?}', 'Admin\UsersController@edit')->name('edit_users');
     Route::post('user/update/{id?}', 'Admin\UsersController@update')->name('update_users');
     Route::get('user/delete/{id?}', 'Admin\UsersController@destroy')->name('delete_users');
+    Route::get('/order', 'Admin\OrdersController@index')->name('manage_orders');
+    Route::get('order/show/{id?}', 'Admin\OrdersController@show')->name('show_orders');
+    Route::post('/order/accept_order', 'Admin\OrdersController@acceptOrder')->name('accept_orders');
+    Route::get('/order/update_quantity/{id?}', 'Admin\OrdersController@updateQuantity')->name('update_quantity');
+    Route::post('order/denied_order', 'Admin\OrdersController@deniedOrder')->name('denied_orders');
+
 });
 
 /* Admin */
@@ -58,3 +64,22 @@ Route::get('users/{user}/detail', 'UserController@show')->name('users.detail');
 Route::patch('users/{user}', 'UserController@update')->name('users.update');
 Route::get('/changePassword','UserController@showChangePassword');
 Route::post('/changePassword', 'UserController@changePassword')->name('changePassword');
+
+Route::group(['prefix' => 'products'], function(){
+    Route::get('/product-accord-category/{category}', 'ProductController@product_accord_category')->name('pro_accord_cate');
+    Route::get('/product-accord-price/{parameter}', 'ProductController@product_accord_price')->name('pro_accord_price');
+    Route::get('/{product}', 'ProductController@show')->name('product_detail');
+});
+
+Route::group(['prefix' => 'order'], function(){
+    Route::post('/order-item', 'OrderController@orderItem')->name('order_item');
+    Route::post('/order-item/update-quantity', 'OrderController@updateQuantity')->name('update_quantity');
+    Route::post('/order-item/delete-item', 'OrderController@deleteItem')->name('delete_item');
+    Route::get('/order-item/{order}', 'OrderController@checkout')->name('checkout');
+    Route::post('/order-item/update_ship_address', 'OrderController@update_ship_address')->name('update_ship_address');
+    Route::get('/order-item/finish-order/{order}', 'OrderController@finish_order')->name('finish_order');
+    Route::post('/order-item/accept_order', 'OrderController@accept_order')->name('accept_order');
+    Route::get('/list-order/{user}', 'OrderController@list_order')->name('list_order');
+    Route::get('/list-order/{order}/detail', 'OrderController@order_detail')->name('order_detail');
+});
+/* Client*/
