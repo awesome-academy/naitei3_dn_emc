@@ -84,8 +84,7 @@
                                 {{ trans('product_detail.Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardTC') }}
                             </li>
                             <li class="mb-3">
-                                <h6 class="remaining">{{ trans('product_detail.Remaining:') }} </h6>
-                                <b>{{$product->quantity}}</b>
+                                <h6 class="remaining">{{ trans('product_detail.Remaining:') }} </h6><b>{{$product->quantity}}</b>
                             </li>
                         </ul>
                     </div>
@@ -119,7 +118,7 @@
                                     <input type="hidden" name="currency_code" value="USD">
                                     <input type="hidden" name="return" value=" ">
                                     <input type="hidden" name="cancel_return" value=" ">
-                                    <input type="submit" name="submit" value="Add to cart" class="button">
+                                    <input type="button" name="add_to_cart" value="Add to cart"  onclick="addTocart({{$product->id}})" class="button add_to_cart">
                                 </fieldset>
                             </form>
                         </div>
