@@ -28,9 +28,9 @@
                         <input type="hidden" name="currency_code" value="USD" />
                         <input type="hidden" name="return" value=" " />
                         <input type="hidden" name="cancel_return" value=" " />
-                        <input type="submit" name="submit" value="Add to cart" class="button btn" />
                     </fieldset>
                 </form>
+                <input type="button" onclick="addTocart({{$product->id}})" name="add_to_cart" value="Add to cart" class="button btn add_to_cart" />
             </div>
         </div>
     </div>

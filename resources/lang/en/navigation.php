@@ -5,4 +5,5 @@
         'contact' => 'Contact Us',
         'home' => 'Home',
         'new_arrivals' => 'New Arrivals',
+        'order-history' => 'Order History'
     ];
