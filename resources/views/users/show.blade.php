@@ -1,17 +1,17 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="{{asset('client/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
-	<!-- Bootstrap css -->
-	<link href="{{asset('client/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
-	<!-- Main css -->
-	<link rel="stylesheet" href="{{asset('client/css/fontawesome-all.css')}}">
-	<!-- Font-Awesome-Icons-CSS -->
-	<link href="{{asset('client/css/popuo-box.css')}}" rel="stylesheet" type="text/css" media="all" />
-	<!-- pop-up-box -->
-	<link href="{{asset('client/css/menu.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <title>Ecommerce Website</title>
+    <link rel="icon" href="{{asset('client/images/logo2.png')}}">
+    <!-- //Meta tag Keywords -->
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+	<!-- Css & BS -->
+    <link rel="stylesheet" href="{{mix('client/css/client.css')}}" type="text/css">
+    <!-- //Css & BS -->
+	<!-- web fonts -->
+	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	    rel="stylesheet">
+	<!-- //web fonts -->
 </head>
 <body>
     <div class="form-group">

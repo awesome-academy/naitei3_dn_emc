@@ -32,11 +32,16 @@
                         <a class="nav-link" href="about.html">{{trans('navigation.aboutUs')}}</a>
                     </li>
                     <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-                        <a class="nav-link" href="product.html">b{{ trans('navigation.new_arrivals') }}</a>
+                        <a class="nav-link" href="product.html">{{ trans('navigation.new_arrivals') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">{{ trans('navigation.contact') }}</a>
                     </li>
+                    @if (Auth::check())
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('list_order', Auth::user()->id)}}">{{ trans('navigation.order-history') }}</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </nav>
