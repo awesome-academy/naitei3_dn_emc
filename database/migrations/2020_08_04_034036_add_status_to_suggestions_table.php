@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddQuantityToOrderItemsTable extends Migration
+class AddStatusToSuggestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddQuantityToOrderItemsTable extends Migration
      */
     public function up()
     {
-        Schema::table('order_items', function (Blueprint $table) {
-            $table->integer('quantity')->unsigned()->nullable()->default(1);
+        Schema::table('suggestions', function (Blueprint $table) {
+            $table->integer('status')->unsigned()->nullable()->default(3);
         });
     }
 
@@ -25,7 +25,7 @@ class AddQuantityToOrderItemsTable extends Migration
      */
     public function down()
     {
-        Schema::table('=order_items', function (Blueprint $table) {
+        Schema::table('suggestions', function (Blueprint $table) {
             //
         });
     }

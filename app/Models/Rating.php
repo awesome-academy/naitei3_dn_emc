@@ -12,6 +12,8 @@ class Rating extends Model
      * @var array
      */
     protected $fillable = [
+        'user_id',
+        'product_id',
         'rating_star',
     ];
 

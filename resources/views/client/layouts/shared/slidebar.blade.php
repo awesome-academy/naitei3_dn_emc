@@ -2,29 +2,30 @@
 <div class="col-lg-3 mt-lg-0 mt-4 p-lg-0">
     <div class="side-bar p-sm-4 p-3">
         <div class="search-hotel border-bottom py-2">
-            <h3 class="agileits-sear-head mb-3">Search Here..</h3>
-            <form action="#" method="post">
-                <input type="search" placeholder="Product name..." name="search" required="">
+            <h3 class="agileits-sear-head mb-3">{{trans('product.search-here')}}</h3>
+            <form action="{{route('search_product')}}" method="GET">
+                @csrf
+                <input type="search" placeholder="Product name or price..." name="search" required="">
                 <input type="submit" value=" ">
             </form>
         </div>
         <!-- price -->
         <div class="range border-bottom py-2">
-            <h3 class="agileits-sear-head mb-3">Price</h3>
+            <h3 class="agileits-sear-head mb-3">{{trans('product.price')}}</h3>
             <div class="w3l-range">
                 <ul>
                     {{-- cho nay su dung jquery post price ve server --}}
                     <li>
-                        <a href="{{route('pro_accord_price', ['parameter' => 999])}}" class="price-product" >Under $1,000</a>
+                        <a href="{{route('pro_accord_price', ['parameter' => 999])}}" class="price-product" >{{trans('sidebar.under_1000')}}</a>
                     </li>
                     <li>
-                        <a href="{{route('pro_accord_price', ['parameter' => 1000])}}" class="price-product">$1,000 - $5,000</a>
+                        <a href="{{route('pro_accord_price', ['parameter' => 1000])}}" class="price-product">{{trans('sidebar.approx_1000_5000')}}</a>
                     </li>
                     <li>
-                        <a href="{{route('pro_accord_price', ['parameter' => 5000])}}" class="price-product">$5,000 - $10,000</a>
+                        <a href="{{route('pro_accord_price', ['parameter' => 5000])}}" class="price-product">{{trans('sidebar.approx_5000_10000')}}</a>
                     </li>
                     <li>
-                        <a href="{{route('pro_accord_price', ['parameter' => 10001])}}" class="price-product">Over $10,000</a>
+                        <a href="{{route('pro_accord_price', ['parameter' => 10001])}}" class="price-product">{{trans('sidebar.over_10000')}}</a>
                     </li>
                 </ul>
             </div>
@@ -32,7 +33,7 @@
         <!-- //price -->
         <!-- discounts -->
         <div class="left-side border-bottom py-2">
-            <h3 class="agileits-sear-head mb-3">Discount</h3>
+            <h3 class="agileits-sear-head mb-3">{{trans('product.discount')}}</h3>
             <ul>
                 <li>
                     <input type="checkbox" class="checked">
@@ -51,7 +52,7 @@
         <!-- //discounts -->
         <!-- reviews -->
         <div class="customer-rev border-bottom left-side py-2">
-            <h3 class="agileits-sear-head mb-3">Customer Review</h3>
+            <h3 class="agileits-sear-head mb-3">{{trans('product.customer-review')}}</h3>
             <ul>
                 <li>
                     <a href="#">
@@ -115,7 +116,7 @@
         <!-- //electronics -->
         <!-- arrivals -->
         <div class="left-side border-bottom py-2">
-            <h3 class="agileits-sear-head mb-3">New Arrivals</h3>
+            <h3 class="agileits-sear-head mb-3">{{trans('product.new-arrivals')}}</h3>
             <ul>
                 <li>
                     <input type="checkbox" class="checked">
@@ -130,7 +131,7 @@
         <!-- //arrivals -->
         <!-- best seller -->
         <div class="f-grid py-2">
-            <h3 class="agileits-sear-head mb-3">Best Seller</h3>
+            <h3 class="agileits-sear-head mb-3">{{trans('product.best-seller')}}</h3>
             <div class="box-scroll">
                 <div class="scroll">
                     @foreach (Helper::best_seller() as $bs)

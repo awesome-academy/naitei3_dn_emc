@@ -5,6 +5,8 @@
     "/admin/js/jquery.slimscroll.js": "/admin/js/jquery.slimscroll.js",
     "/admin/js/scripts.js": "/admin/js/scripts.js",
     "/client/js/SmoothScroll.min.js": "/client/js/SmoothScroll.min.js",
+    "/client/js/add_to_cart.js": "/client/js/add_to_cart.js",
+    "/client/js/comment_product.js": "/client/js/comment_product.js",
     "/client/js/creditly.js": "/client/js/creditly.js",
     "/client/js/creditly2.js": "/client/js/creditly2.js",
     "/client/js/easing.js": "/client/js/easing.js",
@@ -12,12 +14,11 @@
     "/client/js/imagezoom.js": "/client/js/imagezoom.js",
     "/client/js/jquery.flexslider.js": "/client/js/jquery.flexslider.js",
     "/client/js/jquery.magnific-popup.js": "/client/js/jquery.magnific-popup.js",
-    "/client/js/minicart.js": "/client/js/minicart.js",
     "/client/js/move-top.js": "/client/js/move-top.js",
+    "/client/js/rating_product.js": "/client/js/rating_product.js",
     "/client/js/scroll.js": "/client/js/scroll.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/admin/js/admin.js": "/admin/js/admin.js",
     "/client/css/client.css": "/client/css/client.css",
     "/admin/css/admin.css": "/admin/css/admin.css"
 }

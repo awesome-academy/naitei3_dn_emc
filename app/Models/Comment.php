@@ -6,15 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    protected $fillable = [
+        'product_id',
+        'user_id',
+    ];
+
     public function user(){
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function product(){
-        $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class);
     }
 
     public function commentContents(){
-        $this->hasMany(CommentContent::class);
+        return $this->hasMany(CommentContent::class);
     }
 }
